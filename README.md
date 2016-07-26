@@ -8,5 +8,5 @@ Clone and enter [your Google Maps API Key](https://developers.google.com/maps/do
 
 ## Video
 
-![Sample](https://github.com/alexander-mironov/AndroidRxJavaAutocomplete/art/sample.gif)
+![Sample](https://github.com/alexander-mironov/AndroidRxJavaAutocomplete/blob/master/art/sample.gif)
 
