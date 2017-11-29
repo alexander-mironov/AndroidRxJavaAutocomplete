@@ -1,6 +1,7 @@
 package ru.eightbps.rxjavaautocomplete.data.model;
 
 public class Location {
+
     public double lat;
     public double lng;
 

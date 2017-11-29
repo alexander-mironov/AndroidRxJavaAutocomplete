@@ -3,6 +3,7 @@ package ru.eightbps.rxjavaautocomplete.data.model;
 import java.util.List;
 
 public class PlaceAutocompleteResult {
+
     public String status;
     public List<Prediction> predictions;
 
