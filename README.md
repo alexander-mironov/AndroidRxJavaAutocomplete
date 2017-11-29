@@ -1,6 +1,6 @@
-# Android AutoComplete Example (RxJava + Retrofit 2 + Moshi + Google Maps)
+# Android AutoComplete Example (RxJava 2 + Retrofit 2 + Moshi + Google Maps)
 
-An example of using RxJava to autocomplete searches with a delay and viewing search result on a map.
+An example of using RxJava 2 to autocomplete searches with a delay and viewing search result on a map.
 
 ## Usage
 
