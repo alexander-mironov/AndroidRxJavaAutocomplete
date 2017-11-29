@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,29 +9,48 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/enter_city_name_hint"
-        android:paddingTop="24dp"
-        android:textSize="16sp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"/>
+        android:textSize="16sp" />
 
-    <AutoCompleteTextView
-        android:id="@+id/autocomplete_text"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:lines="1"
-        android:singleLine="true"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:imeOptions="actionSearch" />
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapWords|textPostalAddress"
+            android:lines="1"
+            android:paddingEnd="36dp"
+            android:paddingRight="36dp"
+            android:singleLine="true"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/clear_text_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/clear_text"
+            android:padding="6dp"
+            android:src="@drawable/ic_close_black_24dp" />
+    </FrameLayout>
 
     <fragment
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
 </LinearLayout>
 

@@ -3,6 +3,7 @@ package ru.eightbps.rxjavaautocomplete;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 
@@ -13,6 +14,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.jakewharton.rxbinding2.view.RxView;
 import com.jakewharton.rxbinding2.widget.RxAutoCompleteTextView;
 import com.jakewharton.rxbinding2.widget.RxTextView;
 
@@ -52,6 +54,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         final AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autocomplete_text);
         addOnAutoCompleteTextViewItemClickedSubscriber(autoCompleteTextView);
         addOnAutoCompleteTextViewTextChangedObserver(autoCompleteTextView);
+
+        final View clearTextButton = findViewById(R.id.clear_text_button);
+        compositeDisposable.add(RxView.clicks(clearTextButton).subscribe(o -> autoCompleteTextView.setText("")));
     }
 
     @Override

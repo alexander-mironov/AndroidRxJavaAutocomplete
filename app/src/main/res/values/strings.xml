@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">RxJavaAutocomplete</string>
     <string name="enter_city_name_hint">Enter city name:</string>
+    <string name="clear_text">Clear text</string>
 </resources>
